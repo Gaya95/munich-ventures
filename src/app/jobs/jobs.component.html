@@ -323,14 +323,144 @@
       <img src="../../assets/images/chair.png" alt="" />
     </div>
   </section>
-  <!-- <section class="guide container">
-    <h2>ԲԵկոն դիմելու ուղեցույց</h2>
-    <div class="guide-block">
-      <div class="guide-block-inner"></div>
-      <div class="guide-block-inner"></div>
-      <div class="guide-block-inner"></div>
-      <div class="guide-block-inner"></div>
-      <div class="guide-block-inner"></div>
+  <!-- sdfguhdfszfghj -->
+  <div class="pictures container">
+    <h2>ՊԱՏԿԵՐԱՍՐԱՀ</h2>
+    <div class="subtitle-text-block">
+      <p class="subtitle-text">
+        Գործունեությունը սկսելով փոքր արտադրամասում` ընկերությունը ժամանակի
+        ընթացքում ընդարձակվել է եւ այսօր գործում է ժամանակակից, միջազգային
+        ստանդարտներին համապատասխան
+      </p>
     </div>
-  </section> -->
+    <div class="pictures-block">
+      <div class="pictures-block-inner"></div>
+      <div class="pictures-block-inner"></div>
+      <div class="pictures-block-inner"></div>
+      <div class="pictures-block-inner"></div>
+    </div>
+    <div class="prev-next">
+      <img src="../../assets/images/prev.svg" alt="" />
+      <img src="../../assets/images/next.svg" alt="" />
+    </div>
+  </div>
+
+  <section class="faq">
+    <div class="faq-wrapper">
+      <div class="faq-block">
+        <h3>հաճախ տրվող հարցեր</h3>
+
+        <ul class="faq-list">
+          <div class="faq-col">
+            <li class="faq-item">
+              <img src="../../assets/images/faq/plus.svg" alt="open" />
+              <div class="faq-question">
+                Սպառողին հասցնել առողջ և անվտանգ սնունդ
+              </div>
+            </li>
+            <li class="faq-item">
+              <img src="../../assets/images/faq/plus.svg" alt="open" />
+              <div class="faq-question">
+                Լինել նորարար և հասնել միայն ամենաբարձր ցուցանիշներին` ձգտելով
+                նպաստել մսամթերքի հայկական շուկայի զարգացմանը
+              </div>
+            </li>
+          </div>
+          <div class="faq-col">
+            <li class="faq-item" (click)="toggleFaq = !toggleFaq">
+              <ng-container *ngIf="toggleFaq; else closedTempalte">
+                <img src="../../assets/images/faq/minus.svg" alt="open" />
+              </ng-container>
+              <ng-template #closedTempalte>
+                <img src="../../assets/images/faq/plus.svg" alt="open" />
+              </ng-template>
+
+              <div class="faq-question">
+                Աշխատել արտադրանքի որակի կատարելագործման համար
+              </div>
+              <div class="faq-answer" *ngIf="toggleFaq">
+                «ԲԵԿՈՆ ՊՐՈԴՈւԿՏ» ընկերությունը հիմնադրվել է 1995թ. և զբաղվում է
+                մսամթերքի եւ կիսաֆաբրիկատների արտադրությամբ: Գործունեությունը
+                սկսելով փոքր արտադրամասում` ընկերությունը ժամանակի ընթացքում
+                ընդարձակվել է եւ այսօր գործում է ժամանակակից։
+              </div>
+            </li>
+          </div>
+          <div class="faq-col">
+            <li class="faq-item">
+              <img src="../../assets/images/faq/plus.svg" alt="open" />
+              <div class="faq-question">
+                Լինել պատասխանատու հասարակության բոլոր շերտերի առաջ` գիտակցելով
+                արտադրանքի կարևորությունը
+              </div>
+            </li>
+            <li class="faq-item">
+              <img src="../../assets/images/faq/plus.svg" alt="open" />
+              <div class="faq-question">Միավորել լավագույն մասնագետներին</div>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <div class="faq-image">
+        <img src="../../assets/images/faq/faq-bg.png" alt="bg" />
+      </div>
+    </div>
+  </section>
 </main>
+<footer class="footer">
+  <div class="menu">
+    <div class="menu-block">
+      <h4>Ընկերություն</h4>
+      <ul>
+        <li>Օնլայն խանութ</li>
+        <li>արտադրություն</li>
+        <li>գործընկերներ</li>
+        <li>աշխատանք</li>
+        <li>Բլոգ</li>
+      </ul>
+    </div>
+    <div class="menu-block">
+      <h4>ապրանքանիշեր</h4>
+      <ul>
+        <li>bacon meatproducts</li>
+        <li>doctor</li>
+        <li>bacon exclusive</li>
+        <li>farmer</li>
+        <li>tank</li>
+      </ul>
+    </div>
+    <div class="menu-block menu-block--contact">
+      <h4>կապվել մեզ հետ</h4>
+      <ul>
+        <li>info@bacon.am</li>
+        <li>+374 10 25 20 20</li>
+        <li>+374 10 25 00 01</li>
+        <li>9 abovyan highway, v. arzni, kotayk marz, ra</li>
+      </ul>
+    </div>
+    <div class="menu-block menu-block--social">
+      <div class="social-item">
+        <img src="../../assets/images/footer-icons/Tweeter.svg" alt="twitter" />
+      </div>
+      <div class="social-item">
+        <img
+          src="../../assets/images/footer-icons/Linkedin.svg"
+          alt="linkedn"
+        />
+      </div>
+      <div class="social-item">
+        <img
+          src="../../assets/images/footer-icons/Facebook.svg"
+          alt="facebook"
+        />
+      </div>
+      <div class="social-item">
+        <img
+          src="../../assets/images/footer-icons/Instagram.svg"
+          alt="instagram"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="footer__rights">2023 bacon product LLC. all right reserved.</div>
+</footer>

@@ -1,8 +1,12 @@
 @import "../../assets/styles/variables.scss";
+@import "../../assets/styles/media.scss";
 
 .container {
   width: 87.5%;
   margin: 0 auto;
+  @include mobile {
+    width: 90;
+  }
 }
 a {
   text-decoration: none;
@@ -17,9 +21,15 @@ h2 {
   color: $main-text;
   font-size: $title-size;
   text-transform: uppercase;
+  @include mobile {
+    font-size: $text-size;
+  }
 }
 h2 {
   margin-bottom: 34px;
+  @include mobile {
+    margin-bottom: 12px;
+  }
 }
 .subtitle-text-block {
   width: 59%;
@@ -31,6 +41,12 @@ h2 {
     font-weight: 400;
     line-height: 32px;
     margin-bottom: 32px;
+    @include mobile {
+      font-size: $mobile-text-size;
+    }
+  }
+  @include mobile {
+    width: 100%;
   }
 }
 button {
@@ -59,6 +75,7 @@ button {
   position: fixed;
   background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
   width: 100%;
+  z-index: 1;
   &-block {
     display: flex;
     justify-content: space-between;
@@ -92,6 +109,12 @@ button {
   align-items: flex-end;
   margin-bottom: 123px;
 
+  @include tablet {
+    height: auto;
+    background-image: url("../../assets/images/bg-mobile.png");
+    background-size: contain;
+  }
+
   &-block {
     width: 100%;
     min-height: 645px;
@@ -99,15 +122,29 @@ button {
     background-position: bottom;
     padding: 178px 0 0 0;
 
+    @include tablet {
+      padding: 580px 0 50px 0;
+    }
+
     h1 {
       color: $white;
       margin-bottom: 50px;
+
+      @include tablet {
+        font-size: 20px;
+        line-height: 113.008%;
+        letter-spacing: 0.8px;
+      }
     }
 
     &-inner {
       display: flex;
       justify-content: space-between;
       gap: 25px;
+
+      @include tablet {
+        flex-direction: column;
+      }
 
       &__item {
         flex: 0 0 16%;
@@ -123,6 +160,11 @@ button {
           text-transform: uppercase;
           margin-bottom: 27px;
           font-family: Oswald;
+
+          @include tablet {
+            font-size: 90px;
+            letter-spacing: 3.6px;
+          }
         }
         .text-block {
           display: flex;
@@ -131,6 +173,10 @@ button {
 
           img {
             width: 44px;
+
+            @include tablet {
+              width: 36px;
+            }
           }
 
           p {
@@ -140,6 +186,12 @@ button {
             line-height: 142.48%; /* 25.646px */
             letter-spacing: 0.72px;
             text-transform: uppercase;
+
+            @include tablet {
+              font-size: 16px;
+              line-height: 142.48%;
+              letter-spacing: 0.64px;
+            }
           }
         }
       }
@@ -147,6 +199,10 @@ button {
       &__item--line {
         width: 1px;
         background-color: $white;
+
+        @include tablet {
+          display: none;
+        }
       }
 
       &__item--lang {
@@ -155,6 +211,10 @@ button {
         align-items: flex-end;
         justify-content: space-between;
         flex: auto;
+
+        @include tablet {
+          display: none;
+        }
       }
     }
   }
@@ -217,6 +277,9 @@ button {
             top: -20px;
           }
         }
+        @include mobile {
+          flex: 0 0;
+        }
       }
     }
   }
@@ -274,6 +337,7 @@ button {
   display: flex;
   justify-content: space-between;
   margin-bottom: 254px;
+  align-items: center;
   &-inner {
     h2 {
       margin-bottom: 74px;
@@ -330,19 +394,273 @@ button {
     }
   }
 }
-// .guide {
-//   h2 {
-//     text-align: center;
-//     margin-bottom: 80px;
-//   }
-//   &-block {
-//     display: flex;
-//     &-inner {
-//       width: 330px;
-//       height: 330px;
+.pictures {
+  &-block {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    &-inner {
+      flex: 0 0 377px;
+      height: 377px;
+      border-radius: 26px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      &:first-child {
+        background-position: 40% 0%;
+        background-image: url("../../assets/images/picture1.png");
+      }
+      &:nth-child(2) {
+        background-image: url("../../assets/images/picture2.png");
+      }
+      &:nth-child(3) {
+        background-image: url("../../assets/images/picture3.png");
+        background-position: center;
+      }
+      &:last-child {
+        background-image: url("../../assets/images/picture4.png");
+        background-position: right;
+      }
+    }
+  }
+  .prev-next {
+    margin-bottom: 226px;
+  }
+}
+.faq {
+  color: #fff;
+  background-color: #252523;
+  .faq-wrapper {
+    display: flex;
 
-//       background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23EC3463' stroke-width='5' stroke-dasharray='15' stroke-dashoffset='86' stroke-linecap='butt'/%3e%3c/svg%3e");
-//       border-radius: 100px;
-//     }
-//   }
-// }
+    @include tablet {
+      flex-direction: column;
+    }
+
+    .faq-block {
+      padding: 195px 90px 175px 120px;
+      flex: 0 0 60%;
+
+      @include tablet {
+        padding: 80px 42px 50px 24px;
+      }
+
+      h3 {
+        margin-bottom: 90px;
+        color: #979491;
+        font-size: 72px;
+        font-weight: 700;
+        letter-spacing: 2.88px;
+        text-transform: uppercase;
+
+        @include tablet {
+          margin-bottom: 18px;
+          font-size: 20px;
+          line-height: 113.008%;
+          letter-spacing: 0.8px;
+        }
+      }
+
+      .faq-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 105px;
+
+        @include desktop {
+          gap: 60px;
+        }
+
+        @include tablet {
+          flex-direction: column;
+          gap: 36px;
+        }
+
+        .faq-col {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 74px;
+
+          @include tablet {
+            gap: 36px;
+          }
+        }
+
+        .faq-item {
+          height: fit-content;
+          position: relative;
+          padding: 20px 24px 22px;
+          border-radius: 26px;
+          background: #353431;
+
+          img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+            cursor: pointer;
+          }
+
+          .faq-question {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 34px;
+
+            @include tablet {
+              font-size: 16px;
+              line-height: 26px;
+            }
+          }
+
+          .faq-answer {
+            margin-top: 18px;
+            font-family: HayRoboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+
+            @include tablet {
+              font-size: 14px;
+              line-height: 26px;
+            }
+          }
+        }
+      }
+    }
+    .faq-image {
+      flex: 0 0 40%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+.footer {
+  padding: 120px 120px 30px 120px;
+  color: #fff;
+  background-color: #252523;
+
+  @include tablet {
+    padding: 60px 0 0 24px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @include desktop {
+      flex-wrap: wrap;
+      gap: 100px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .menu-block {
+      flex: 0 0 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include tablet {
+        flex: auto;
+      }
+
+      h4 {
+        font-size: 16px;
+        letter-spacing: 0.64px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        font-weight: 400;
+
+        @include tablet {
+          margin-bottom: 22px;
+          font-size: 14px;
+          letter-spacing: 0.56px;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 37px;
+
+        @include tablet {
+          gap: 22px;
+        }
+
+        li {
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: 0.72px;
+          text-transform: uppercase;
+
+          @include tablet {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.64px;
+          }
+        }
+      }
+
+      &--contact {
+        ul {
+          flex-grow: 1;
+          justify-content: space-between;
+
+          li {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          }
+        }
+      }
+      &--social {
+        flex-grow: 1;
+        justify-content: space-between;
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        flex: 1 1 auto;
+
+        @include desktop {
+          align-items: flex-start;
+          flex: 0 0 400px;
+        }
+
+        @include tablet {
+          flex-direction: row;
+          flex: auto;
+          align-items: flex-start;
+          justify-content: space-around;
+          gap: 0;
+        }
+
+        .social-item {
+          width: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .footer__rights {
+    margin-top: 110px;
+    text-align: center;
+
+    @include tablet {
+      margin-top: 70px;
+      padding-bottom: 100px;
+    }
+  }
+}
