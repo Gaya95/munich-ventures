@@ -110,7 +110,8 @@ button {
   height: 1080px;
   background-image: url("../../assets/images/bg.png");
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: top center;
+  background-size: cover;
   display: flex;
   align-items: flex-end;
   margin-bottom: 123px;
@@ -304,11 +305,13 @@ button {
 }
 .team {
   padding-top: 127px;
+  margin-bottom: 143px;
   background-image: url("../../assets/images/team-bg.png");
   height: 1120px;
   background-repeat: no-repeat;
-  margin-bottom: 143px;
-  background-size: contain;
+  background-size: cover;
+  background-position: top;
+
   @include desktop{
     padding-top: 70px;
     height: 1000px;
@@ -388,16 +391,9 @@ button {
   }
 }
 .positions {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 254px;
-  align-items: center;
-
-  @include tablet {
-    flex-direction: column;
-  }
-
   .prev-next {
+    margin-top: 55px;
+    
     @include tablet {
       display: none;
     }
@@ -407,6 +403,7 @@ button {
     display: none;
 
     @include tablet {
+      margin-top: 55px;
       display: block;
       text-align: center;
       color: #727272;
@@ -415,119 +412,135 @@ button {
       line-height: 20px; /* 142.857% */
     }
   }
+  
+  .positions-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 
-  &-inner {
-    &:first-child {
-      flex-grow: 1;
-
-      @include tablet {
-        order: 2;
-      }
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
     }
 
-    &:last-child {
-      @include tablet {
-        order: 1;
-        text-align: center;
-        padding: 20px 0;
-      }
-
-      img {
-        width: 100%;
+    &-inner {
+      &:first-child {
+        flex: 0 0 60%;
 
         @include tablet {
-          width: 60%;
+          order: 2;
         }
       }
-    }
 
-    h2 {
-      margin-bottom: 74px;
+      &:last-child {
+        flex: 0 0 40%;
+        text-align: center;
 
-      @include tablet {
-        font-size: 20px;
-        line-height: 113.008%; /* 22.602px */
-        letter-spacing: 0.8px;
-      }
-    }
-    &-block {
-      display: flex;
-      gap: 28px;
-      margin-bottom: 54px;
+        @include tablet {
+          order: 1;
+          text-align: center;
+          padding: 20px 0;
+        }
 
-      @include tablet {
-        flex-direction: column;
-      }
+        img {
+          max-width: 100%;
 
-      &__item {
-        flex: 1;
-        gap: 28px;
-        display: flex;
-        flex-direction: column;
-        flex: 0 0 470px;
-
-        &:nth-child(2) {
           @include tablet {
-            display: none;
+            width: 60%;
           }
         }
+      }
 
-        .test {
-          padding: 24px 20px;
-          border-radius: 18px;
-          background: #fff;
-          box-shadow: 0px 0px 37px 0px rgba(0, 0, 0, 0.25);
-          justify-content: space-between;
+      h2 {
+        margin-bottom: 74px;
+
+        @include tablet {
+          font-size: 20px;
+          line-height: 113.008%; /* 22.602px */
+          letter-spacing: 0.8px;
+        }
+      }
+      &-block {
+        display: flex;
+        gap: 28px;
+
+        @include tablet {
+          flex-direction: column;
+        }
+
+        &__item {
+          flex: 1;
+          gap: 28px;
           display: flex;
           flex-direction: column;
-          min-height: 174px;
-          .position-title {
-            font-size: $text-size;
-            color: $black;
-            font-weight: 700;
-            line-height: 32px;
-            margin-bottom: 14px;
+          justify-content: space-between;
 
+          &:nth-child(2) {
             @include tablet {
-              font-size: 16px;
-              line-height: 26px; /* 162.5% */
+              display: none;
             }
           }
-          .deadline-block {
-            display: flex;
-            align-items: center;
+
+          .test {
+            padding: 24px 20px;
+            border-radius: 18px;
+            background: #fff;
+            box-shadow: 0px 0px 37px 0px rgba(0, 0, 0, 0.25);
             justify-content: space-between;
-
-            @include tablet {
-              flex-direction: column;
-              gap: 10px;
-            }
-
-            &-text {
-              display: flex;
-              flex-direction: column;
+            display: flex;
+            flex-direction: column;
+            min-height: 174px;
+            flex: 0 0 30%;
+            
+            .position-title {
+              font-size: $text-size;
+              color: $black;
+              font-weight: 700;
+              line-height: 32px;
+              margin-bottom: 14px;
 
               @include tablet {
-                width: 100%;
-              }
-
-              .deadline {
-                color: #727272;
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 20px;
-              }
-              .deadline-date {
-                color: $black;
                 font-size: 16px;
-                font-weight: 700;
-                line-height: 20px; /* 125% */
+                line-height: 26px; /* 162.5% */
               }
             }
+            .deadline-block {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 15px;
 
-            button {
               @include tablet {
-                width: 100%;
+                flex-direction: column;
+                gap: 10px;
+              }
+
+              &-text {
+                display: flex;
+                flex-direction: column;
+
+                @include tablet {
+                  width: 100%;
+                }
+
+                .deadline {
+                  color: #727272;
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 20px;
+                }
+                .deadline-date {
+                  color: $black;
+                  font-size: 16px;
+                  font-weight: 700;
+                  line-height: 20px; /* 125% */
+                }
+              }
+
+              button {
+                @include tablet {
+                  width: 100%;
+                }
               }
             }
           }
@@ -550,6 +563,9 @@ button {
       border-radius: 26px;
       background-size: cover;
       background-repeat: no-repeat;
+      box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.25);
+
+
       @include desktop {
         height: 256px;
       }
@@ -588,8 +604,13 @@ button {
     }
 
     .faq-block {
-      padding: 195px 90px 175px 120px;
+      height: 1100px;
+      padding: 0 90px 0 120px;
       flex: 0 0 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
 
       @include tablet {
         padding: 80px 42px 50px 24px;
@@ -752,6 +773,10 @@ button {
           font-weight: 700;
           letter-spacing: 0.72px;
           text-transform: uppercase;
+
+          a {
+            color: $white;
+          }
 
           @include tablet {
             font-size: 16px;

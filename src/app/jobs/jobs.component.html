@@ -1,4 +1,4 @@
-<header class="header">
+<header *ngIf="true" class="header">
   <div class="header-block container">
     <div class="header-block__inner">
       <a href="#">
@@ -30,7 +30,8 @@
   </div>
 </header>
 <main>
-  <section class="jobs">
+  <!-- jobs -->
+  <section *ngIf="true" class="jobs">
     <div class="jobs-block">
       <div class="container">
         <h1>աշխատանՔ բեկոնոիմ</h1>
@@ -98,7 +99,9 @@
       </div>
     </div>
   </section>
-  <section class="mission" *ngIf="false">
+
+  <!-- mission -->
+  <section *ngIf="true" class="mission">
     <div class="container">
       <h2>Բեկոնի առաքելությունը</h2>
       <div class="subtitle-text-block">
@@ -173,7 +176,9 @@
     </div>
  
   </section>
-  <section class="team" >
+
+  <!-- team -->
+  <section *ngIf="true" class="team" >
     <div class="container team-block">
       <h2>ՄԵՐ ԹԻՄԸ</h2>
       <div class="team-block-text">
@@ -185,162 +190,170 @@
       </div>
     </div>
   </section>
-  <div class="container">
-    <h2>ԲԵՆԵՖԻթՆԵր</h2>
-    <div class="subtitle-text-block">
-      <p class="subtitle-text">
-        Գործունեությունը սկսելով փոքր արտադրամասում` ընկերությունը ժամանակի
-        ընթացքում ընդարձակվել է եւ այսօր գործում է ժամանակակից, միջազգային
-        ստանդարտներին համապատասխան մասնաշենքում, որը կառուցվել է 2006թ.
-        Ավստրիացի հայտնի մասնագետների կողմից կազմված նախագծով:
-      </p>
-    </div>
-  </div>
-  <div class="scroll">
-    <section class="benefits container">
-      <div class="benefits-block">
-        <div class="benefits-block-inner">
-          <div class="img-block">
-            <img src="../../assets/images/benefits/benefit1.svg" alt="" />
-          </div>
-          <p class="benefits-block-inner__text">
-            Անսահման հնարավորություններ մասնագիտական աճի և զարգացման
-          </p>
-        </div>
-        <div class="benefits-block-inner">
-          <div class="img-block">
-            <img src="../../assets/images/benefits/benefit2.svg" alt="" />
-          </div>
-          <p class="benefits-block-inner__text">
-            Ինչպես մեր գործադիր տնօրենն է սիրում ասել՝ «լուսավոր» աշխատանքային
-            միջավայր
-          </p>
-        </div>
-        <div class="benefits-block-inner">
-          <div class="img-block">
-            <img src="../../assets/images/benefits/benefit3.svg" alt="" />
-          </div>
-          <p class="benefits-block-inner__text">
-            Շուկայի լավագույն մասնագետների հետ աշխատանք
-          </p>
-        </div>
-        <div class="benefits-block-inner">
-          <div class="img-block">
-            <img src="../../assets/images/benefits/benefit4.svg" alt="" />
-          </div>
-          <p class="benefits-block-inner__text">
-            Անվտանգ փոխադրում՝ ճանապարհը դեպի գործարան և ետ
-          </p>
-        </div>
-        <div class="benefits-block-inner">
-          <div class="img-block">
-            <img src="../../assets/images/benefits/benefit5.svg" alt="" />
-          </div>
-          <p class="benefits-block-inner__text">Անվճար ճաշային ընդմիջում</p>
-          <p></p>
-        </div>
-      </div>
-    </section>
-  </div>
 
-  <section class="container" >
-    <h2>Թափուր Հաստիքներ</h2>
-    <div class="positions">
-    
-    <div class="positions-inner">
-      
-      <div class="positions-inner-block">
-        <div class="positions-inner-block__item">
-          <div class="test">
-            <p class="position-title">
-              Մասնագիտացված տաղավարների եւ ֆիրմային խանութների պատասխանատու
-            </p>
-            <div class="deadline-block">
-              <div class="deadline-block-text">
-                <span class="deadline">Վերջնաժամկետ</span>
-                <span class="deadline-date">03․02․23</span>
-              </div>
-              <button>ԴԻՄԵԼ</button>
-            </div>
-            <div class="deadline-block"></div>
-          </div>
-          <div class="test">
-            <p class="position-title">
-              Բիզնես գործընթացների կառավարման մասնագետ
-            </p>
-            <div class="deadline-block">
-              <div class="deadline-block-text">
-                <span class="deadline">Վերջնաժամկետ</span>
-                <span class="deadline-date">03․02․23</span>
-              </div>
-              <button>ԴԻՄԵԼ</button>
-            </div>
-          </div>
-          <div class="test">
-            <p class="position-title">
-              Մասնագիտացված տաղավարների եւ ֆիրմային խանութների պատասխանատու
-            </p>
-            <div class="deadline-block">
-              <div class="deadline-block-text">
-                <span class="deadline">Վերջնաժամկետ</span>
-                <span class="deadline-date">03․02․23</span>
-              </div>
-              <button>ԴԻՄԵԼ</button>
-            </div>
-          </div>
-        </div>
-        <div class="positions-inner-block__item">
-          <div class="test">
-            <p class="position-title">
-              Բիզնես գործընթացների կառավարման մասնագետ
-            </p>
-            <div class="deadline-block">
-              <div class="deadline-block-text">
-                <span class="deadline">Վերջնաժամկետ</span>
-                <span class="deadline-date">03․02․23</span>
-              </div>
-              <button>ԴԻՄԵԼ</button>
-            </div>
-          </div>
-          <div class="test">
-            <p class="position-title">
-              Մասնագիտացված տաղավարների եւ ֆիրմային խանութների պատասխանատու
-            </p>
-            <div class="deadline-block">
-              <div class="deadline-block-text">
-                <span class="deadline">Վերջնաժամկետ</span>
-                <span class="deadline-date">03․02․23</span>
-              </div>
-              <button>ԴԻՄԵԼ</button>
-            </div>
-          </div>
-          <div class="test">
-            <p class="position-title">Վաճառողուհի խորհրդատու</p>
-            <div class="deadline-block">
-              <div class="deadline-block-text">
-                <span class="deadline">Վերջնաժամկետ</span>
-                <span class="deadline-date">03․02․23</span>
-              </div>
-              <button>ԴԻՄԵԼ</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="prev-next tablet-hidden">
-        <img src="../../assets/images/prev.svg" alt="" />
-        <img src="../../assets/images/next.svg" alt="" />
-      </div>
-      <div class="see-more">
-        Ցույց տալ ավելին
+  <!-- benefits -->
+  <section *ngIf="true" class="benefits">
+    <div class="container">
+      <h2>ԲԵՆԵՖԻթՆԵր</h2>
+      <div class="subtitle-text-block">
+        <p class="subtitle-text">
+          Գործունեությունը սկսելով փոքր արտադրամասում` ընկերությունը ժամանակի
+          ընթացքում ընդարձակվել է եւ այսօր գործում է ժամանակակից, միջազգային
+          ստանդարտներին համապատասխան մասնաշենքում, որը կառուցվել է 2006թ.
+          Ավստրիացի հայտնի մասնագետների կողմից կազմված նախագծով:
+        </p>
       </div>
     </div>
-    <div class="positions-inner">
-      <img src="../../assets/images/chair.png" alt="" />
+    <div class="scroll">
+      <section class="container">
+        <div class="benefits-block">
+          <div class="benefits-block-inner">
+            <div class="img-block">
+              <img src="../../assets/images/benefits/benefit1.svg" alt="" />
+            </div>
+            <p class="benefits-block-inner__text">
+              Անսահման հնարավորություններ մասնագիտական աճի և զարգացման
+            </p>
+          </div>
+          <div class="benefits-block-inner">
+            <div class="img-block">
+              <img src="../../assets/images/benefits/benefit2.svg" alt="" />
+            </div>
+            <p class="benefits-block-inner__text">
+              Ինչպես մեր գործադիր տնօրենն է սիրում ասել՝ «լուսավոր» աշխատանքային
+              միջավայր
+            </p>
+          </div>
+          <div class="benefits-block-inner">
+            <div class="img-block">
+              <img src="../../assets/images/benefits/benefit3.svg" alt="" />
+            </div>
+            <p class="benefits-block-inner__text">
+              Շուկայի լավագույն մասնագետների հետ աշխատանք
+            </p>
+          </div>
+          <div class="benefits-block-inner">
+            <div class="img-block">
+              <img src="../../assets/images/benefits/benefit4.svg" alt="" />
+            </div>
+            <p class="benefits-block-inner__text">
+              Անվտանգ փոխադրում՝ ճանապարհը դեպի գործարան և ետ
+            </p>
+          </div>
+          <div class="benefits-block-inner">
+            <div class="img-block">
+              <img src="../../assets/images/benefits/benefit5.svg" alt="" />
+            </div>
+            <p class="benefits-block-inner__text">Անվճար ճաշային ընդմիջում</p>
+            <p></p>
+          </div>
+        </div>
+      </section>
     </div>
-  </div>
   </section>
-  <!-- sdfguhdfszfghj -->
-  <div class="pictures">
+
+  <!-- positions -->
+  <section *ngIf="true" class="positions container" >
+    <h2>Թափուր Հաստիքներ</h2>
+    <div class="positions-wrapper">
+    
+      <div class="positions-wrapper-inner">
+        
+        <div class="positions-wrapper-inner-block">
+          <div class="positions-wrapper-inner-block__item">
+            <div class="test">
+              <p class="position-title">
+                Մասնագիտացված տաղավարների եւ ֆիրմային խանութների պատասխանատու
+              </p>
+              <div class="deadline-block">
+                <div class="deadline-block-text">
+                  <span class="deadline">Վերջնաժամկետ</span>
+                  <span class="deadline-date">03․02․23</span>
+                </div>
+                <button>ԴԻՄԵԼ</button>
+              </div>
+              <div class="deadline-block"></div>
+            </div>
+            <div class="test">
+              <p class="position-title">
+                Բիզնես գործընթացների կառավարման մասնագետ
+              </p>
+              <div class="deadline-block">
+                <div class="deadline-block-text">
+                  <span class="deadline">Վերջնաժամկետ</span>
+                  <span class="deadline-date">03․02․23</span>
+                </div>
+                <button>ԴԻՄԵԼ</button>
+              </div>
+            </div>
+            <div class="test">
+              <p class="position-title">
+                Մասնագիտացված տաղավարների եւ ֆիրմային խանութների պատասխանատու
+              </p>
+              <div class="deadline-block">
+                <div class="deadline-block-text">
+                  <span class="deadline">Վերջնաժամկետ</span>
+                  <span class="deadline-date">03․02․23</span>
+                </div>
+                <button>ԴԻՄԵԼ</button>
+              </div>
+            </div>
+          </div>
+          <div class="positions-wrapper-inner-block__item">
+            <div class="test">
+              <p class="position-title">
+                Բիզնես գործընթացների կառավարման մասնագետ
+              </p>
+              <div class="deadline-block">
+                <div class="deadline-block-text">
+                  <span class="deadline">Վերջնաժամկետ</span>
+                  <span class="deadline-date">03․02․23</span>
+                </div>
+                <button>ԴԻՄԵԼ</button>
+              </div>
+            </div>
+            <div class="test">
+              <p class="position-title">
+                Մասնագիտացված տաղավարների եւ ֆիրմային խանութների պատասխանատու
+              </p>
+              <div class="deadline-block">
+                <div class="deadline-block-text">
+                  <span class="deadline">Վերջնաժամկետ</span>
+                  <span class="deadline-date">03․02․23</span>
+                </div>
+                <button>ԴԻՄԵԼ</button>
+              </div>
+            </div>
+            <div class="test">
+              <p class="position-title">Վաճառողուհի խորհրդատու</p>
+              <div class="deadline-block">
+                <div class="deadline-block-text">
+                  <span class="deadline">Վերջնաժամկետ</span>
+                  <span class="deadline-date">03․02․23</span>
+                </div>
+                <button>ԴԻՄԵԼ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="positions-wrapper-inner">
+        <img src="../../assets/images/chair.png" alt="" />
+      </div>
+    </div>
+
+    <div class="prev-next tablet-hidden">
+      <img src="../../assets/images/prev.svg" alt="" />
+      <img src="../../assets/images/next.svg" alt="" />
+    </div>
+
+    <div class="see-more">
+      Ցույց տալ ավելին
+    </div>
+  </section>
+  
+  <!-- pictures -->
+  <section *ngIf="true" class="pictures">
     <div class="container">
       <h2>ՊԱՏԿԵՐԱՍՐԱՀ</h2>
       <div class="subtitle-text-block">
@@ -351,24 +364,26 @@
         </p>
       </div>
     </div>
-  <div class="scroll">
-    <div class="container">
-      <div class="pictures-block">
-        <div class="pictures-block-inner"></div>
-        <div class="pictures-block-inner"></div>
-        <div class="pictures-block-inner"></div>
-        <div class="pictures-block-inner"></div>
+    <div class="scroll">
+      <div class="container">
+        <div class="pictures-block">
+          <div class="pictures-block-inner"></div>
+          <div class="pictures-block-inner"></div>
+          <div class="pictures-block-inner"></div>
+          <div class="pictures-block-inner"></div>
+        </div>
       </div>
     </div>
-  </div>
-
-    <div class="prev-next tablet-hidden">
-      <img src="../../assets/images/prev.svg" alt="" />
-      <img src="../../assets/images/next.svg" alt="" />
+    <div class="container">
+      <div class="prev-next tablet-hidden">
+        <img src="../../assets/images/prev.svg" alt="" />
+        <img src="../../assets/images/next.svg" alt="" />
+      </div>
     </div>
-  </div>
+  </section>
 
-  <section class="faq" >
+  <!-- faq -->
+  <section *ngIf="true" class="faq" >
     <div class="faq-wrapper">
       <div class="faq-block">
         <h3>հաճախ տրվող հարցեր</h3>
@@ -430,58 +445,69 @@
     </div>
   </section>
 </main>
-<footer class="footer">
+<!-- footer -->
+<footer *ngIf="true" class="footer">
   <div class="menu">
     <div class="menu-block">
       <h4>Ընկերություն</h4>
       <ul>
-        <li>Օնլայն խանութ</li>
-        <li>արտադրություն</li>
-        <li>գործընկերներ</li>
-        <li>աշխատանք</li>
-        <li>Բլոգ</li>
+        <li><a href="">Օնլայն խանութ</a></li>
+        <li><a href="">արտադրություն</a></li>
+        <li><a href="">գործընկերներ</a></li>
+        <li><a href="">աշխատանք</a></li>
+        <li><a href="">Բլոգ</a></li>
       </ul>
     </div>
     <div class="menu-block">
       <h4>ապրանքանիշեր</h4>
       <ul>
-        <li>bacon meatproducts</li>
-        <li>doctor</li>
-        <li>bacon exclusive</li>
-        <li>farmer</li>
-        <li>tank</li>
+        <li><a href="">bacon meatproducts</a></li>
+        <li><a href="">doctor</a></li>
+        <li><a href="">bacon exclusive</a></li>
+        <li><a href="">farmer</a></li>
+        <li><a href="">tank</a></li>
       </ul>
     </div>
     <div class="menu-block menu-block--contact">
       <h4>կապվել մեզ հետ</h4>
       <ul>
-        <li>info@bacon.am</li>
-        <li>+374 10 25 20 20</li>
-        <li>+374 10 25 00 01</li>
+        <li><a href = "mailto: info@bacon.am">info@bacon.am</a></li>
+        <li>
+          <p><a href="tel:+374 10 25 20 20">+374 10 25 20 20</a></p>
+          <p><a href="tel:+374 10 25 00 01">+374 10 25 00 01</a></p>
+        </li>
         <li>9 abovyan highway, v. arzni, kotayk marz, ra</li>
       </ul>
     </div>
     <div class="menu-block menu-block--social">
       <div class="social-item">
-        <img src="../../assets/images/footer-icons/Tweeter.svg" alt="twitter" />
+        <a href="">
+          <img src="../../assets/images/footer-icons/Tweeter.svg" alt="twitter" />
+        </a>
       </div>
       <div class="social-item">
-        <img
+        <a href="">
+          <img
           src="../../assets/images/footer-icons/Linkedin.svg"
           alt="linkedn"
         />
+        </a>
       </div>
       <div class="social-item">
-        <img
-          src="../../assets/images/footer-icons/Facebook.svg"
-          alt="facebook"
-        />
+        <a href="">
+          <img
+            src="../../assets/images/footer-icons/Facebook.svg"
+            alt="facebook"
+          />
+        </a>
       </div>
       <div class="social-item">
-        <img
-          src="../../assets/images/footer-icons/Instagram.svg"
-          alt="instagram"
-        />
+        <a href="">
+          <img
+            src="../../assets/images/footer-icons/Instagram.svg"
+            alt="instagram"
+          />
+        </a>
       </div>
     </div>
   </div>
