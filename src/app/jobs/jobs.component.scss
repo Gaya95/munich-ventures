@@ -313,23 +313,31 @@ button {
 .team {
   padding-top: 127px;
   margin-bottom: 143px;
-  background-image: url("../../assets/images/team-bg.png");
-  height: 1120px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+
+  .team-bg {
+    img {
+      width: 100%;
+      margin-top: -15vw;
+
+      @include tablet {
+        margin-top: -10vw;;
+      }
+    }
+  }
 
   @include desktop{
     padding-top: 70px;
-    height: 1000px;
   }
   @include tablet{
     margin-bottom: 80px;
   }
   &-block {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
+
     &-text {
       width: 51%;
       .subtitle-text {
