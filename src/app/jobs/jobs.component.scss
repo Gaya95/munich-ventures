@@ -120,6 +120,7 @@ button {
     height: auto;
     background-image: url("../../assets/images/bg-mobile.png");
     background-size: contain;
+    margin-bottom: 60px;
   }
 
   &-block {
@@ -130,7 +131,7 @@ button {
     padding: 178px 0 0 0;
 
     @include tablet {
-      padding: 580px 0 50px 0;
+      padding:370px 0 50px 0;
     }
 
     h1 {
@@ -141,6 +142,7 @@ button {
         font-size: 20px;
         line-height: 113.008%;
         letter-spacing: 0.8px;
+        margin-bottom: 30px;
       }
     }
 
@@ -228,6 +230,11 @@ button {
 }
 .mission {
   margin-bottom: 43px;
+  .subtitle-text{
+    @include tablet{
+      margin-bottom: 0;
+    }
+  }
 
   .mission-block {
     display: flex;
@@ -316,6 +323,9 @@ button {
     padding-top: 70px;
     height: 1000px;
   }
+  @include tablet{
+    margin-bottom: 80px;
+  }
   &-block {
     display: flex;
     flex-direction: column;
@@ -324,6 +334,9 @@ button {
       width: 51%;
       .subtitle-text {
         text-align: center;
+      }
+      @include tablet{
+        width: 100%;
       }
     }
   }
@@ -336,6 +349,9 @@ button {
 }
 .benefits {
   margin-bottom: 377px;
+  @include tablet {
+    margin-bottom: 80px;
+  }
   .subtitle-text {
     @include tablet {
       margin-bottom: 0;
@@ -403,13 +419,14 @@ button {
     display: none;
 
     @include tablet {
-      margin-top: 55px;
+      margin-top: 30px;
       display: block;
       text-align: center;
       color: #727272;
       font-size: 14px;
       font-weight: 700;
       line-height: 20px; /* 142.857% */
+      margin-bottom: 80px;
     }
   }
   
@@ -556,6 +573,7 @@ button {
     justify-content: space-between;
     @include tablet {
       gap: 24px;
+      margin-bottom: 80px;
     }
     &-inner {
       flex: 0 0 24%;
@@ -670,6 +688,9 @@ button {
             right: 0;
             transform: translate(50%, -50%);
             cursor: pointer;
+            @include tablet{
+              width: 36px;
+            }
           }
 
           .faq-question {
