@@ -232,10 +232,10 @@ button {
     display: flex;
     margin-bottom: 60px;
     gap: 65px;
-    @media screen and (min-width:1025px) {
+    @media screen and (min-width: 1025px) {
       overflow: scroll;
     }
-    @include tablet{
+    @include tablet {
       gap: 22px;
     }
 
@@ -247,7 +247,7 @@ button {
       border-radius: 26px;
       display: flex;
       align-items: flex-end;
-      @include tablet{
+      @include tablet {
         flex: 0 0 268px;
         height: 373px;
       }
@@ -278,18 +278,17 @@ button {
         justify-content: center;
         position: relative;
         @include tablet {
-         padding: 16px;
-          }
-     
+          padding: 16px;
+        }
+
         &-text {
           font-size: $text-size;
           line-height: 26px;
           color: $white;
           @include tablet {
-          font-size: $mobile-text-size;
-          line-height: 24px;
+            font-size: $mobile-text-size;
+            line-height: 24px;
           }
-
         }
         .mission-icon {
           position: absolute;
@@ -309,6 +308,11 @@ button {
   height: 1120px;
   background-repeat: no-repeat;
   margin-bottom: 143px;
+  background-size: contain;
+  @include desktop{
+    padding-top: 70px;
+    height: 1000px;
+  }
   &-block {
     display: flex;
     flex-direction: column;
@@ -406,9 +410,9 @@ button {
       display: block;
       text-align: center;
       color: #727272;
-font-size: 14px;
-font-weight: 700;
-line-height: 20px; /* 142.857% */
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px; /* 142.857% */
     }
   }
 
@@ -441,9 +445,9 @@ line-height: 20px; /* 142.857% */
       margin-bottom: 74px;
 
       @include tablet {
-font-size: 20px;
-line-height: 113.008%; /* 22.602px */
-letter-spacing: 0.8px;
+        font-size: 20px;
+        line-height: 113.008%; /* 22.602px */
+        letter-spacing: 0.8px;
       }
     }
     &-block {
@@ -485,8 +489,8 @@ letter-spacing: 0.8px;
             margin-bottom: 14px;
 
             @include tablet {
-font-size: 16px;
-line-height: 26px; /* 162.5% */
+              font-size: 16px;
+              line-height: 26px; /* 162.5% */
             }
           }
           .deadline-block {
@@ -537,12 +541,21 @@ line-height: 26px; /* 162.5% */
     margin-bottom: 60px;
     display: flex;
     justify-content: space-between;
+    @include tablet {
+      gap: 24px;
+    }
     &-inner {
-      flex: 0 0 377px;
+      flex: 0 0 24%;
       height: 377px;
       border-radius: 26px;
       background-size: cover;
       background-repeat: no-repeat;
+      @include desktop {
+        height: 256px;
+      }
+      @include tablet {
+        flex: 0 0 256px;
+      }
       &:first-child {
         background-position: 40% 0%;
         background-image: url("../../assets/images/picture1.png");
