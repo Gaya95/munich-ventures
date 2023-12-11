@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./jobs.component.scss']
 })
 export class JobsComponent {
-
+  toggleFaq = true;
+  menuOpened = false;
 }
