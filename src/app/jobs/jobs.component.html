@@ -1,11 +1,17 @@
 <header *ngIf="true" class="header">
   <div class="header-block container">
     <div class="header-block__inner">
-      <a href="#">
-        <img src="../assets/images/logo.png" alt="" />
+      <a href="#" class="header-logo">
+        <img src="../assets/images/logo.png" alt="logo" />
       </a>
     </div>
     <div class="header-block__inner">
+      <img
+        class="header-burger"
+        src="../../assets/images/burger.svg"
+        alt="menu"
+        (click)="menuOpened = true"
+      />
       <ul>
         <li>
           <a href="">գլխավոր</a>
@@ -27,6 +33,7 @@
         </li>
       </ul>
     </div>
+    `
   </div>
 </header>
 <main>
@@ -91,9 +98,9 @@
             </div>
           </div>
           <div class="jobs-block-inner__item jobs-block-inner__item--lang">
-            <div>en</div>
-            <div>en</div>
-            <div>en</div>
+            <div>հայ</div>
+            <div>eng</div>
+            <div>рус</div>
           </div>
         </div>
       </div>
@@ -168,17 +175,16 @@
           </div>
         </div>
 
-      <div class="prev-next tablet-hidden">
-        <img src="../../assets/images/prev.svg" alt="" />
-        <img src="../../assets/images/next.svg" alt="" />
+        <div class="prev-next tablet-hidden">
+          <img src="../../assets/images/prev.svg" alt="" />
+          <img src="../../assets/images/next.svg" alt="" />
+        </div>
       </div>
     </div>
-    </div>
- 
   </section>
 
   <!-- team -->
-  <section *ngIf="true" class="team" >
+  <section *ngIf="false" class="team">
     <div class="container team-block">
       <h2>ՄԵՐ ԹԻՄԸ</h2>
       <div class="team-block-text">
@@ -191,12 +197,12 @@
     </div>
 
     <div class="team-bg">
-      <img src="../../assets/images/team-bg.png" alt="">
+      <img src="../../assets/images/team-bg.png" alt="" />
     </div>
   </section>
 
   <!-- benefits -->
-  <section *ngIf="true" class="benefits">
+  <section *ngIf="false" class="benefits">
     <div class="container">
       <h2>ԲԵՆԵՖԻթՆԵր</h2>
       <div class="subtitle-text-block">
@@ -257,12 +263,10 @@
   </section>
 
   <!-- positions -->
-  <section *ngIf="true" class="positions container" >
+  <section *ngIf="false" class="positions container">
     <h2>Թափուր Հաստիքներ</h2>
     <div class="positions-wrapper">
-    
       <div class="positions-wrapper-inner">
-        
         <div class="positions-wrapper-inner-block">
           <div class="positions-wrapper-inner-block__item">
             <div class="test">
@@ -351,13 +355,11 @@
       <img src="../../assets/images/next.svg" alt="" />
     </div>
 
-    <div class="see-more">
-      Ցույց տալ ավելին
-    </div>
+    <div class="see-more">Ցույց տալ ավելին</div>
   </section>
-  
+
   <!-- pictures -->
-  <section *ngIf="true" class="pictures">
+  <section *ngIf="false" class="pictures">
     <div class="container">
       <h2>ՊԱՏԿԵՐԱՍՐԱՀ</h2>
       <div class="subtitle-text-block">
@@ -387,7 +389,7 @@
   </section>
 
   <!-- faq -->
-  <section *ngIf="true" class="faq" >
+  <section *ngIf="false" class="faq">
     <div class="faq-wrapper">
       <div class="faq-block">
         <h3>հաճախ տրվող հարցեր</h3>
@@ -450,8 +452,8 @@
   </section>
 </main>
 <!-- footer -->
-<footer *ngIf="true" class="footer">
-  <div class="menu">
+<footer *ngIf="false" class="footer">
+  <div class="menu container">
     <div class="menu-block">
       <h4>Ընկերություն</h4>
       <ul>
@@ -475,7 +477,7 @@
     <div class="menu-block menu-block--contact">
       <h4>կապվել մեզ հետ</h4>
       <ul>
-        <li><a href = "mailto: info@bacon.am">info@bacon.am</a></li>
+        <li><a href="mailto: info@bacon.am">info@bacon.am</a></li>
         <li>
           <p><a href="tel:+374 10 25 20 20">+374 10 25 20 20</a></p>
           <p><a href="tel:+374 10 25 00 01">+374 10 25 00 01</a></p>
@@ -486,15 +488,18 @@
     <div class="menu-block menu-block--social">
       <div class="social-item">
         <a href="">
-          <img src="../../assets/images/footer-icons/Tweeter.svg" alt="twitter" />
+          <img
+            src="../../assets/images/footer-icons/Tweeter.svg"
+            alt="twitter"
+          />
         </a>
       </div>
       <div class="social-item">
         <a href="">
           <img
-          src="../../assets/images/footer-icons/Linkedin.svg"
-          alt="linkedn"
-        />
+            src="../../assets/images/footer-icons/Linkedin.svg"
+            alt="linkedn"
+          />
         </a>
       </div>
       <div class="social-item">
@@ -517,3 +522,43 @@
   </div>
   <div class="footer__rights">2023 bacon product LLC. all right reserved.</div>
 </footer>
+
+<div class="mobile-menu" *ngIf="menuOpened">
+  <div class="mobile-menu-header container">
+    <img src="../assets/images/logo.png" alt="logo" />
+    <img
+      src="../../assets/images/mobile-close.svg"
+      alt="close mobile"
+      (click)="menuOpened = false"
+    />
+  </div>
+
+  <div class="container">
+    <ul>
+      <li>
+        <a href="">գլխավոր</a>
+      </li>
+      <li>
+        <a href="">խանոիթ</a>
+      </li>
+      <li>
+        <a href="">մեր մասին</a>
+      </li>
+      <li>
+        <a href="">աշխատանք</a>
+      </li>
+      <li>
+        <a href="">գործընկերներ</a>
+      </li>
+      <li>
+        <a href="">բլոգ</a>
+      </li>
+    </ul>
+
+    <div class="mobile-langs">
+      <div>հայ</div>
+      <div>eng</div>
+      <div>рус</div>
+    </div>
+  </div>
+</div>
